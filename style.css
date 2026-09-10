@@ -1,0 +1,272 @@
+/* ---------------------------------------
+   Tokens — Maillard palette
+--------------------------------------- */
+:root {
+  --cream:        #F4E9D8;
+  --cream-deep:   #EADFC4;
+  --espresso:     #3A2A1C;
+  --coffee:       #6B4E33;
+  --caramel:      #A8703A;
+  --amber:        #DCA53E;
+  --rust:         #BD5A2C;
+  --hairline:     #D3BD95;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Work Sans", -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  color: var(--espresso);
+  margin: 0 0 0.4em;
+  font-weight: 600;
+}
+
+p { margin: 0 0 1em; }
+
+/* ---------------------------------------
+   Header / Navigation
+--------------------------------------- */
+.site-header {
+  background: var(--cream-deep);
+  border-bottom: 2px solid var(--hairline);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 0;
+  transition: transform 0.15s ease;
+}
+.logo-btn:hover { transform: scale(1.06); }
+.logo-btn:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.logo-mark { width: 44px; height: 44px; }
+.logo-disc { fill: var(--amber); stroke: var(--espresso); stroke-width: 2.5; }
+.logo-bolt { fill: var(--rust); }
+.logo-rays line {
+  stroke: var(--coffee);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--coffee);
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  background: var(--hairline);
+  color: var(--espresso);
+}
+
+.nav-link[aria-current="page"] {
+  background: var(--rust);
+  color: var(--cream);
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------
+   Layout / Main content
+--------------------------------------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.eyebrow-text {
+  color: var(--coffee);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.page-intro { max-width: 62ch; margin-bottom: 40px; }
+.page-intro p { max-width: 62ch; }
+
+/* ---------------------------------------
+   Home — hero
+--------------------------------------- */
+.hero {
+  max-width: 62ch;
+  margin-bottom: 48px;
+}
+
+.hero-stat {
+  font-size: clamp(48px, 8vw, 84px);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-unit {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--coffee);
+}
+
+.hero-copy { font-size: 18px; }
+
+.data-note {
+  font-size: 13px;
+  color: var(--coffee);
+  font-style: italic;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.fact-card {
+  background: var(--cream-deep);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.fact-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.fact-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--coffee);
+  margin: 4px 0 10px;
+}
+
+.fact-card p {
+  font-size: 14px;
+  color: var(--espresso);
+  margin: 0;
+}
+
+/* ---------------------------------------
+   Televisions — energy table
+--------------------------------------- */
+.energy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.energy-table th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--coffee);
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--hairline);
+}
+
+.energy-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 15px;
+}
+
+.draw-bar {
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: var(--cream-deep);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.draw-bar::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: var(--fill);
+  background: linear-gradient(90deg, var(--amber), var(--rust));
+  border-radius: 6px;
+}
+
+/* ---------------------------------------
+   Footer
+--------------------------------------- */
+.site-footer {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.site-footer p { margin: 0 0 4px; }
+.genai-note { color: var(--amber); }
+
+/* ---------------------------------------
+   Responsive
+--------------------------------------- */
+@media (max-width: 640px) {
+  .nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .card-row { grid-template-columns: 1fr; }
+  .energy-table { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-btn { transition: none; }
+}
