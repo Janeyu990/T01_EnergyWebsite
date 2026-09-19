@@ -269,7 +269,7 @@ body a:hover{
 
 	.chart-container{
     max-width: 500px;
-    margin: 20px auto ;
+    margin: auto;
     padding: 0;
     background-color: transparent;
     border: none;
