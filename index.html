@@ -1,149 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appliance Energy Consumption</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8" />
+	<meta name="description" content="Appliance Energy Consumption">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Energy">
+	<meta name="author" content="Jane Yu Yan Zhen">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="javascript.js"></script>
+	<title>Home &mdash; Appliance Energy Consumption</title>
 </head>
 <body>
+	<nav>
+		<div class="nav-left">
+			<a href="index.html" class="logo" aria-label="Home">
+				<img src="PowerIcon.png" width="55" height="55" alt="PowerIconLogo">
+			</a>
+			<label for="menu-toggle" class="menu-icon">&#9776;</label>
+		</div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main navigation">
-    <button class="logo-btn" id="logoBtn" aria-label="Go to home page">
-      <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g class="logo-rays">
-          <line x1="32" y1="2" x2="32" y2="10"></line>
-          <line x1="32" y1="54" x2="32" y2="62"></line>
-          <line x1="2" y1="32" x2="10" y2="32"></line>
-          <line x1="54" y1="32" x2="62" y2="32"></line>
-          <line x1="10.7" y1="10.7" x2="16.2" y2="16.2"></line>
-          <line x1="47.8" y1="47.8" x2="53.3" y2="53.3"></line>
-          <line x1="10.7" y1="53.3" x2="16.2" y2="47.8"></line>
-          <line x1="47.8" y1="16.2" x2="53.3" y2="10.7"></line>
-        </g>
-        <circle cx="32" cy="32" r="21" class="logo-disc"></circle>
-        <path d="M35 14 L20 36 H30 L28 50 L45 26 H34 Z" class="logo-bolt"></path>
-      </svg>
-    </button>
+		<input type="checkbox" id="menu-toggle">
 
-    <ul class="nav-links" id="navLinks">
-      <li><button class="nav-link" data-page="home" aria-current="page">Home</button></li>
-      <li><button class="nav-link" data-page="televisions">Televisions</button></li>
-      <li><button class="nav-link" data-page="about">About Us</button></li>
-    </ul>
-  </nav>
-</header>
+		<div class="menu">
+			<div class="dropdown">
+				<a href="index.html" class="dropbtn">Home</a>
+			</div>
+			<div class="dropdown">
+				<a href="televisions.html" class="dropbtn">Televisions</a>
+			</div>
+			<div class="dropdown">
+				<a href="about.html" class="dropbtn">About Us</a>
+			</div>
+		</div>
+	</nav>
 
-<main id="main-content">
+	<main>
+		<div class="hero-container">
+			<p class="eyebrow">Australian household appliances</p>
+			<h1 class="hero-stat">1,146 <span class="hero-unit">kWh / year</span></h1>
+			<p id="heroP">That is roughly what an average Australian fridge draws from the grid
+			in a single year, before you count the television, the washing machine, or the kettle.
+			This site collects placeholder figures on how much energy common household appliances
+			use, as a starting point for comparing your own.</p>
+			<p class="data-note">Figures shown across this site are illustrative placeholders for demonstration purposes.</p>
+		</div>
 
-  <!-- HOME PAGE -->
-  <section class="page" id="page-home" data-page="home">
-    <div class="hero">
-      <p class="eyebrow-text">Australian household appliances</p>
-      <h1 class="hero-stat">1,146<span class="hero-unit">kWh / year</span></h1>
-      <p class="hero-copy">That is roughly what an average Australian fridge draws from the grid in a single year — before you count the television, the washing machine, or the kettle. This site collects placeholder figures on how much energy common household appliances use, as a starting point for comparing your own.</p>
-      <p class="data-note">Figures shown across this site are illustrative placeholders for demonstration purposes.</p>
-    </div>
+		<section class="fact-section">
+			<div class="fact-container">
+				<div class="fact-card">
+					<span class="fact-number">1,146</span>
+					<span class="fact-label">kWh/yr &mdash; Fridge/Freezer</span>
+					<p>Runs continuously, so even small efficiency gains add up over a year.</p>
+				</div>
+				<div class="fact-card">
+					<span class="fact-number">195</span>
+					<span class="fact-label">kWh/yr &mdash; Front-load Washer</span>
+					<p>Warm-water cycles use noticeably more energy than cold-water cycles.</p>
+				</div>
+				<div class="fact-card">
+					<span class="fact-number">148</span>
+					<span class="fact-label">kWh/yr &mdash; 55&Prime; LED Television</span>
+					<p>See the Televisions page for a size-by-size breakdown.</p>
+				</div>
+			</div>
+		</section>
+	</main>
 
-    <div class="card-row">
-      <article class="fact-card">
-        <span class="fact-number">1,146</span>
-        <span class="fact-label">kWh/yr &mdash; Fridge/Freezer</span>
-        <p>Runs continuously, so even small efficiency gains add up over a year.</p>
-      </article>
-      <article class="fact-card">
-        <span class="fact-number">195</span>
-        <span class="fact-label">kWh/yr &mdash; Front-load Washer</span>
-        <p>Warm-water cycles use noticeably more energy than cold-water cycles.</p>
-      </article>
-      <article class="fact-card">
-        <span class="fact-number">148</span>
-        <span class="fact-label">kWh/yr &mdash; 55&Prime; LED Television</span>
-        <p>See the Televisions page for a size-by-size breakdown.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- TELEVISIONS PAGE -->
-  <section class="page" id="page-televisions" data-page="televisions" hidden>
-    <div class="page-intro">
-      <p class="eyebrow-text">Screen size &amp; panel type</p>
-      <h1>Television energy use</h1>
-      <p>Estimated annual running cost scales with screen size and panel technology. The table below compares common configurations sold in the Australian market.</p>
-    </div>
-
-    <table class="energy-table">
-      <thead>
-        <tr>
-          <th scope="col">Screen size</th>
-          <th scope="col">Panel type</th>
-          <th scope="col">Est. annual use</th>
-          <th scope="col">Relative draw</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>32&Prime;</td>
-          <td>LED</td>
-          <td>62 kWh</td>
-          <td><span class="draw-bar" style="--fill:20%"></span></td>
-        </tr>
-        <tr>
-          <td>43&Prime;</td>
-          <td>LED</td>
-          <td>95 kWh</td>
-          <td><span class="draw-bar" style="--fill:32%"></span></td>
-        </tr>
-        <tr>
-          <td>55&Prime;</td>
-          <td>LED</td>
-          <td>148 kWh</td>
-          <td><span class="draw-bar" style="--fill:50%"></span></td>
-        </tr>
-        <tr>
-          <td>55&Prime;</td>
-          <td>OLED</td>
-          <td>172 kWh</td>
-          <td><span class="draw-bar" style="--fill:58%"></span></td>
-        </tr>
-        <tr>
-          <td>65&Prime;</td>
-          <td>OLED</td>
-          <td>210 kWh</td>
-          <td><span class="draw-bar" style="--fill:71%"></span></td>
-        </tr>
-        <tr>
-          <td>75&Prime;</td>
-          <td>LED</td>
-          <td>296 kWh</td>
-          <td><span class="draw-bar" style="--fill:100%"></span></td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="data-note">Figures shown are illustrative placeholders for demonstration purposes.</p>
-  </section>
-
-  <!-- ABOUT US PAGE -->
-  <section class="page" id="page-about" data-page="about" hidden>
-    <div class="page-intro">
-      <p class="eyebrow-text">The project</p>
-      <h1>About this site</h1>
-      <p>This site was built as a learning exercise: a small, three-page demonstration of HTML, CSS and JavaScript, hosted from a GitHub repository and deployed with Vercel. Its subject &mdash; household appliance energy consumption &mdash; is a placeholder topic used to practise structuring real content across pages.</p>
-      <p>Replace this paragraph with your own introduction: who built the site, what you learned, and what you'd add next.</p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p>&copy; <span id="footerYear"></span> Your Name Here. Built with HTML, CSS and JavaScript for COS30045.</p>
-  <p class="genai-note">GenAI acknowledgement: describe here which tool(s) you used (e.g. GitHub Copilot) and what they helped generate, or remove this line if you did not use GenAI.</p>
-</footer>
-
-<script src="script.js"></script>
+	<footer class="footer">
+		<div class="footer-bottom">
+			<p>&copy; <span id="footerYear"></span> Jane Yu Yan Zhen. Built with HTML, CSS and JavaScript for COS30045.</p>
+			<p class="genai-note">GenAI acknowledgement: describe here which tool(s) you used (e.g. GitHub Copilot) and what they helped generate, or remove this line if you did not use GenAI.</p>
+		</div>
+	</footer>
 </body>
 </html>
