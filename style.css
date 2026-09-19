@@ -268,13 +268,19 @@ body a:hover{
 	}
 
 	.chart-container{
-		max-width: 480px;
-		margin: 0 auto 10px;
-		background-color: #FBF6EC;
-		border: 1px solid #D3BD95;
-		border-radius: 8px;
-		padding: 20px;
-	}
+    max-width: 850px;
+    margin: 20px auto 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  .chart-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 /* FOOTER */
 	.footer{
