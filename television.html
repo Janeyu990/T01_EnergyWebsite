@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Appliance Energy Consumption">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Energy">
+	<meta name="author" content="Jane Yu Yan Zhen">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+	<script src="javascript.js"></script>
+	<title>Televisions &mdash; Appliance Energy Consumption</title>
+</head>
+<body>
+	<nav>
+		<div class="nav-left">
+			<a href="index.html" class="logo" aria-label="Home">
+				<img src="PowerIcon.png" width="55" height="55" alt="PowerIconLogo">
+			</a>
+			<label for="menu-toggle" class="menu-icon">&#9776;</label>
+		</div>
+
+		<input type="checkbox" id="menu-toggle">
+
+		<div class="menu">
+			<div class="dropdown">
+				<a href="index.html" class="dropbtn">Home</a>
+			</div>
+			<div class="dropdown">
+				<a href="televisions.html" class="dropbtn">Televisions</a>
+			</div>
+			<div class="dropdown">
+				<a href="about.html" class="dropbtn">About Us</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<div class="page-intro">
+			<p class="eyebrow">Screen size &amp; panel type</p>
+			<h2>Television energy use</h2>
+			<p>Estimated annual running cost scales with screen size and panel technology.
+			The table below compares common configurations sold in the Australian market.</p>
+		</div>
+
+		<table class="energy-table">
+			<thead>
+				<tr>
+					<th>Screen size</th>
+					<th>Panel type</th>
+					<th>Est. annual use</th>
+					<th>Relative draw</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>32&Prime;</td>
+					<td>LED</td>
+					<td>62 kWh</td>
+					<td><span class="draw-bar" style="width:20%"></span></td>
+				</tr>
+				<tr>
+					<td>43&Prime;</td>
+					<td>LED</td>
+					<td>95 kWh</td>
+					<td><span class="draw-bar" style="width:32%"></span></td>
+				</tr>
+				<tr>
+					<td>55&Prime;</td>
+					<td>LED</td>
+					<td>148 kWh</td>
+					<td><span class="draw-bar" style="width:50%"></span></td>
+				</tr>
+				<tr>
+					<td>55&Prime;</td>
+					<td>OLED</td>
+					<td>172 kWh</td>
+					<td><span class="draw-bar" style="width:58%"></span></td>
+				</tr>
+				<tr>
+					<td>65&Prime;</td>
+					<td>OLED</td>
+					<td>210 kWh</td>
+					<td><span class="draw-bar" style="width:71%"></span></td>
+				</tr>
+				<tr>
+					<td>75&Prime;</td>
+					<td>LED</td>
+					<td>296 kWh</td>
+					<td><span class="draw-bar" style="width:100%"></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="data-note">Figures shown are illustrative placeholders for demonstration purposes.</p>
+
+		<h2>Television Energy Tips</h2>
+		<div class="tips-box">
+			<p><strong>Size &amp; technology matter.</strong> Larger screens and older tech
+			(e.g., plasma) use more energy. Modern LED/LCD and OLED sets are generally more
+			efficient.</p>
+			<ul>
+				<li>Use the TV&rsquo;s <em>Energy Saver</em> or <em>Eco</em> mode and reduce
+				brightness where comfortable.</li>
+				<li>Disable &ldquo;always-listening&rdquo; voice features if you don&rsquo;t
+				use them; they can add standby draw.</li>
+				<li>Consider star rating and annual kWh on the energy label when purchasing.</li>
+			</ul>
+			<p class="data-note"><em>Placeholder note:</em> insert simple examples of annual
+			kWh for common TV sizes in Australia to make this section concrete.</p>
+		</div>
+
+		<h2>TV Energy Insights: Data Story</h2>
+		<p>This section presents findings from the Australian Government&rsquo;s Television
+		Energy Rating dataset. The aim is to help Australian consumers make informed decisions
+		about technology, size, brand, and efficiency.</p>
+
+		<h3>Chart 1: What TV technologies are most common?</h3>
+		<div class="chart-container">
+			<canvas id="techPieChart"></canvas>
+		</div>
+		<p class="data-note">Chart data shown is placeholder &mdash; replace with your own
+		dataset once you have processed it.</p>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-bottom">
+			<p>&copy; <span id="footerYear"></span> Jane Yu Yan Zhen. Built with HTML, CSS and JavaScript for COS30045.</p>
+			<p class="genai-note">GenAI acknowledgement: describe here which tool(s) you used (e.g. GitHub Copilot) and what they helped generate, or remove this line if you did not use GenAI.</p>
+		</div>
+	</footer>
+</body>
+</html>
