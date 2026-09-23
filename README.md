@@ -1,4 +1,4 @@
-# T01_EnergyWebsite — TV Energy Consumption
+# T01_EnergyWebsite
 
 ## Data Story
 
