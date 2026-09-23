@@ -27,8 +27,7 @@ dataset, published by the Australian Government on
 data.gov.au: https://data.gov.au/data/dataset/energy-rating-for-household-appliances [Downloaded on: 10 Sep. 2026].
 
 ### Data processing
-The raw dataset was cleaned using a KNIME workflow (see `workflow.knime` in this repository)
-before being used in the visualisations:
+The raw dataset was cleaned using a KNIME workflow before being used in the visualisations:
 
 1. **CSV Reader** — loaded the raw dataset.
 2. **Column Filter** — removed columns containing missing/incomplete values.
