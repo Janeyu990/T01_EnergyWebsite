@@ -27,7 +27,7 @@ dataset, published by the Australian Government on
 data.gov.au: https://data.gov.au/data/dataset/energy-rating-for-household-appliances [Downloaded on: 10 Sep. 2026].
 
 ### Data processing
-The raw dataset was cleaned using a KNIME workflow (see `T01(b)` in this repository)
+The raw dataset was cleaned using a KNIME workflow (see `workflow.knime` in this repository)
 before being used in the visualisations:
 
 1. **CSV Reader** — loaded the raw dataset.
@@ -36,6 +36,8 @@ before being used in the visualisations:
 4. **Duplicate Row Filter** — removed duplicate entries based on `model.no`.
 5. **Row Filter** — retained only rows where `Availability status = Available`, so the
    site only shows televisions a shopper could actually buy.
+6. **Column Filter** — Retain columns relevant to the questions only.
+7. **String Manipulation** — Convert all brandto UPPER CASE.
 
 ### Privacy
 The dataset contains product registration information (model, brand, screen size,
